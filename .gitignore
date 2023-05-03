@@ -100,6 +100,7 @@ celerybeat-schedule.*
 .env 
 .venv 
 env/ 
+dareecha/secretFile.py
 venv/ 
 ENV/ 
 env.bak/ 

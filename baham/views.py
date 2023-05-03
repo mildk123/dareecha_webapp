@@ -4,6 +4,7 @@ from baham.enum_types import VehicleType
 from baham.models import VehicleModel
 from django.urls import reverse
 from django.shortcuts import redirect,get_object_or_404
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -49,6 +50,9 @@ def save_vehicle(request):
     _capacity = request.POST.get('capacity')
     _type = request.POST.get('type')
 
+    # user = User.objects.create_user(username='10618',email='noor@example.com',password='test123')
+    # user.save()
+    
     newModel = VehicleModel(vendor=_vendor, model=_model, type=_type, capacity=_capacity)
     newModel.save()
     return HttpResponseRedirect(reverse('ViewVehicles')

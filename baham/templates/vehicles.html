@@ -18,14 +18,14 @@
       <tbody>
         {% for v in vehicles %}
         <tr>
-          <td>{{ v.model_id }}</td>
+          <td>{{ v.make_id }}</td>
           <td>{{ v.vendor }}</td>
           <td>{{ v.model }}</td>
           <td>{{ v.type }}</td>
           <td>{{ v.capacity }}</td>
           <td>
             <button class="btn btn-warning">EDIT</button>
-            <a href="{% url 'delete_vehicle' pk=v.model_id %}"><button class="btn btn-danger">DELETE</button></a>
+            <a href="{% url 'delete_vehicle' pk=v.make_id %}"><button class="btn btn-danger">DELETE</button></a>
           </td>
         </tr>
         {% empty %}
